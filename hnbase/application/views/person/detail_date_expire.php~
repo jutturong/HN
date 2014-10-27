@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?=$title?></title>
+<?php    //$this->load->view('import_css');   ?>    
+<?php   //$this->load->view('import_ext'); //load  extjs  framework  ?>  
+<?php    $this->load->view('import_bootstrap');  //ตัวนี้เอาออกไว้ก่อนเพราะทำให้ form กำหนดขนาดความกว้างไม่ได้ ?>
+<?php    $this->load->view('import_jqueryui'); ?>
+<?php    //$this->load->view('import_css_custom'); //comment2?>
+<?php    //$this->load->view('import_style'); ?>
+
+</head>
+
+<body>
+
+<!--<div class="table-responsive">-->
+<table class="table table-hover">
+  
+<!-- On rows -->
+<!--
+<tr class="active">#</tr>
+<tr class="success">1</tr>
+<tr class="warning">2</tr>
+<tr class="danger">3</tr>
+<tr class="info">4</tr>
+-->
+
+<!-- On cells (`td` or `th`) -->
+<tr>
+  <td class="active">PASSPORT DAYS</td>
+  <td class="active">VISA DAYS</td>
+  <td class="active">90 REPORT DAYS</td>
+  <td class="active">Work Permit DAYS</td>
+<!--  
+  <td class="success">1</td>
+  <td class="warning">2</td>
+  <td class="danger">3</td>
+  <td class="info">4</td>
+  -->
+</tr>
+
+<tr>
+<td class="success"><?php echo $passport; ?></td>
+<td class="warning"><?php echo $visa; ?></td>
+<td class="success"><?php echo $register; ?></td>
+<td class="warning"><?php echo $workpermit; ?></td>
+</tr>
+
+  </table>
+  
+<!--</div>-->
+
+
+</body>
+
+
+</html>

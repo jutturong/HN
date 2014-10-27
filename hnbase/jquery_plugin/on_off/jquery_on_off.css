@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+
+label.switch-toggle { background: url('switch.png') repeat-y; display: block !important; height: 12px; padding-left: 26px; cursor: pointer; display: none; } 
+label.switch-toggle.on { background-position: 0px 12px; }
+ label.switch-toggle.off { background-position: 0px 0px; }
+ label.switch-toggle.hidden { display: none; }
+
