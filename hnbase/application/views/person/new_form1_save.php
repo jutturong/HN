@@ -5,12 +5,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?=$title?></title>
 
-
-
-
-
-
-
 <style>
 /*
 input
@@ -534,7 +528,7 @@ function send2()
             });
 */
 
-          $("#birthday").datepicker({ 
+          $( "#birthday" ).datepicker({ 
                 dateFormat: "yy-mm-dd", 
                 changeMonth: true,
                 changeYear: true,
@@ -608,7 +602,7 @@ $(function(){
 </script>
 
 <script type="text/javascript"> 
-  /*
+
   $(function() 
    {
           $( "#iss_passport" ).datepicker({ 
@@ -619,43 +613,6 @@ $(function(){
                 yearRange: '-100:+1'
             });
     });
-    */
-    
-     //test click exp_passport,exp_passport
-     
-     
-   $(function() 
-   {
-          $( "#exp_passport" ).datepicker({ 
-                dateFormat: "yy-mm-dd", 
-                changeMonth: true,
-                changeYear: true,
-                showButtonPanel:true,
-                yearRange: '-100:+10'
-            });
-    });
-    
-    
-     
-   $(function() 
-   {
-          $( "#iss_passport" ).datepicker({ 
-                dateFormat: "yy-mm-dd", 
-                changeMonth: true,
-                changeYear: true,
-                showButtonPanel:true,
-                yearRange: '-100:+1',
-                onSelect:function(){
-					//alert('t');
-					$("#exp_passport").val('');
-					var  fecha=$(this).datepicker('getDate');
-					//$("#exp_passport").datepicker("setDate",new Data(fecha.getTime()));
-					$("#exp_passport").datepicker("setDate","+90d");
-				}
-            });
-    });
-     
-     
 
 /* 
 $(function(){  
@@ -722,7 +679,6 @@ $(function(){
 
 <script type="text/javascript">  
 
-  /*
   $(function() 
    {
           $( "#exp_passport" ).datepicker({ 
@@ -730,14 +686,9 @@ $(function(){
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel:true,
-                yearRange: '-100:+10'
+                yearRange: '-100:+1'
             });
     });
-    */
-    
-  
-
-    
 
 
 /*
@@ -804,20 +755,6 @@ $(function(){
 
 
 <script type="text/javascript">  
-	
-	
-	  $(function() 
-   {
-          $( "#exp_v" ).datepicker({ 
-                dateFormat: "yy-mm-dd", 
-                changeMonth: true,
-                changeYear: true,
-                showButtonPanel:true,
-                 yearRange: '-100:+10'
-            });
-    });
-	
-	
 
   $(function() 
    {
@@ -826,11 +763,7 @@ $(function(){
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel:true,
-                yearRange: '-100:+1',
-                onSelect:function(){
-					
-					$('#exp_v').datepicker("setDate","+90d");
-				}
+                yearRange: '-100:+1'
             });
     });
 
@@ -898,8 +831,6 @@ $(function(){
 </script>
 
 <script type="text/javascript">  
-	
-	/*
   $(function() 
    {
           $( "#exp_v" ).datepicker({ 
@@ -907,12 +838,9 @@ $(function(){
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel:true,
-                 yearRange: '-100:+10'
+                 yearRange: '-100:+1'
             });
     });
-    */
-    
-    
 
 /*
 $(function(){  
@@ -1062,7 +990,7 @@ $(function(){
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel:true,
-                yearRange: '-100:+10'
+                yearRange: '-100:+1'
             });
     });
 
@@ -1215,7 +1143,7 @@ $(function(){
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel:true,
-                yearRange: '-100:+10'
+                yearRange: '-100:+1'
             });
     });
 
@@ -1291,7 +1219,7 @@ $(function(){
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel:true,
-                yearRange: '-100:+10'
+                yearRange: '-100:+1'
             });
     });
 
@@ -1481,211 +1409,17 @@ value: 60
 
 </script>
 
-
-
-<?php $this->load->view("import_daterange")?>
-
-<script type="text/javascript">  
-  $(function(){
-  	
-  	
-      
-/*
-	define a new language named "custom"
-	*/
-
-	$.dateRangePickerLanguages['custom'] = 
-	{
-		'selected': 'Choosed:',
-		'days': 'Days',
-		'apply': 'Close',
-		'week-1' : 'Mon',
-		'week-2' : 'Tue',
-		'week-3' : 'Wed',
-		'week-4' : 'Thu',
-		'week-5' : 'Fri',
-		'week-6' : 'Sat',
-		'week-7' : 'Sun',
-		'month-name': ['January','February','March','April','May','June','July','August','September','October','November','December'],
-		'shortcuts' : 'Shortcuts',
-		'past': 'Past',
-		'7days' : '7days',
-		'14days' : '14days',
-		'30days' : '30days',
-		'previous' : 'Previous',
-		'prev-week' : 'Week',
-		'prev-month' : 'Month',
-		'prev-quarter' : 'Quarter',
-		'prev-year' : 'Year',
-		'less-than' : 'Date range should longer than %d days',
-		'more-than' : 'Date range should less than %d days',
-		'default-more' : 'Please select a date range longer than %d days',
-		'default-less' : 'Please select a date range less than %d days',
-		'default-range' : 'Please select a date range between %d and %d days',
-		'default-default': 'This is costom language'
-	};
-	
-          // date-range00  Passport Date       
-        $('#date-range00').dateRangePicker({  
-           
-               startOfWeek: 'monday',
-               separator : ' to ',           
-            shortcuts : 
-		      {
-			      'next-days': [7,90,180],
-               // 'next-days': [90,180]
-		         'next': ['week','month','year']
-		      }
-            
-        });
-            
-        function splitdate(date,range,nameid)
-        {
-        	  //var  range_date=$('#date-range00').val();
-        	  var  range_date=$(date).val();
-        	  var  begin=range_date.split(" ");
-           return $(nameid).val(begin[range]);
-        }
-        
-        
-          $('#insert_passport').button({  }).click(function(){
-        	    
-        	    //var  range_date=$('#date-range00').val();
-        	    var  range_date=$('#date-range00');
-        	    var  begin=splitdate(range_date,0,'#iss_passport');
-        	    var  end=splitdate(range_date,2,'#exp_passport');
-        	    
-        	   // var  begin=range_date.split(" ");
-        	    
-        	     //alert(' ' + begin[0] );
-        	    
-        	    // $('#iss_passport').val(begin[0]);
-        	    // $('#exp_passport').val(begin[2]);
-        	    
-        	     
-        	});
-        
-   //##------------------------- START PASSPORT----------------  
-   //  VISA Date       
-        $('#date-range01').dateRangePicker({  
-           
-               startOfWeek: 'monday',
-               separator : ' to ',           
-            shortcuts : 
-		      {
-			      'next-days': [7,90,180],
-               // 'next-days': [90,180]
-		         'next': ['week','month','year']
-		      }
-            
-        });
-        
-              
-        $('#insert_visa').button({  }).click(function(){
-        	    
-        	    var  range_date=$('#date-range01');
-        	    var  begin2=splitdate(range_date,0,'#iss_visa');
-        	    var  end2=splitdate(range_date,2,'#exp_v');
-        	    
-        	   // var  begin=range_date.split(" ");
-        	    
-        	     //alert(' ' + begin[0] );
-        	    
-        	    // $('#iss_passport').val(begin[0]);
-        	    // $('#exp_passport').val(begin[2]);
-        	    
-        	     
-        	});
-        	
-        
-  //##------------------------- 90 Report Date. (วันที่รายงานตัว )---------------- 
-       $('#date-range02').dateRangePicker({  
-           
-               startOfWeek: 'monday',
-               separator : ' to ',           
-            shortcuts : 
-		      {
-			      'next-days': [7,90,180],
-               // 'next-days': [90,180]
-		         'next': ['week','month','year']
-		      }
-            
-        });
-          
-          $('#insert_report').button({  }).click(function(){
-        	    
-        	    var  range_date=$('#date-range02');
-        	    var  begin=splitdate(range_date,0,'#register_date');
-        	    var  end=splitdate(range_date,2,'#next_register_date');
-        	    
-        	   // var  begin=range_date.split(" ");
-        	    
-        	     //alert(' ' + begin[0] );
-        	    
-        	    // $('#iss_passport').val(begin[0]);
-        	    // $('#exp_passport').val(begin[2]);
-        	    
-        	     
-        	});
-        	
-        	
-        	//##-------- Work Permit Iss. Date--------
-        	$('#date-range03').dateRangePicker({  
-           
-               startOfWeek: 'monday',
-               separator : ' to ',           
-            shortcuts : 
-		      {
-			      'next-days': [7,90,180],
-               // 'next-days': [90,180]
-		         'next': ['week','month','year']
-		      }
-            
-        });
-        $('#insert_work').button({  }).click(function(){
-        	    
-        	    var  range_date=$('#date-range03');
-        	    var  begin=splitdate(range_date,0,'#iss_date_workpermit');
-        	    var  end=splitdate(range_date,2,'#exp_date_workpermit');
-        	    
-        	   // var  begin=range_date.split(" ");
-        	    
-        	     //alert(' ' + begin[0] );
-        	    
-        	    // $('#iss_passport').val(begin[0]);
-        	    // $('#exp_passport').val(begin[2]);
-        	    
-        	     
-        	});  
-        
-        
-       	
-       		
-  	
-  	});
-</script>
-
-
-
-
 </head>
 
 <body>
-   <?php //$this->load->view('load_bootstrap') ?>
+   <? //$this->load->view('load_bootstrap') ?>
   
   
    <?PHP // echo  form_open('home/insert_employee')?>
    <form id="form_peson">
-   <?php echo  form_fieldset(''.$fieldset.''); ?>
+   <?PHP echo  form_fieldset(''.$fieldset.''); ?>
          
        <ul>
-       
-        
-          
-
-  
-           
-           
            <li>
                First Name (ชื่อ-สกุล) : 
                
@@ -1737,25 +1471,6 @@ value: 60
             <li>
             PASSPORT NO (เลขที่หนังสือเดินทาง ) : <input type="text" name="PASSPORT_NO"  id="PASSPORT_NO"  maxlength="10"  style="width:30%" />
             </li>
-            
-            <!--
-            <li>
-                 <div class="demo">
-                     test date range : <input id="date-range00" size="40" value=""> 
-                            
-                 </div>            
-            </li>
-            -->
-            
-           <li>
-
-               <div class="demo">
-                   Passport Date : <input id="date-range00" size="20" value="">  
-                   <button type="button" id="insert_passport"><span class="ui-icon 	ui-icon-calendar" /></span>Passport Insert Date </button>         
-               </div>
-           </li>
-           
-           
            
             <li>
             PASS Iss. (วันที่ออกพาสปอร์ต ) : <input type="text" name="iss_passport" readonly="true"
@@ -1768,7 +1483,7 @@ value: 60
            
            
            <li>
-               <button type="button" id="check_passport"><span class="ui-icon 	ui-icon-clock" /></span>PASSPORT count DATE </button> :
+               <button type="button" id="check_passport"><span class="ui-icon ui-icon-carat-2-n-s" /></span>PASSPORT count DATE </button> :
                <span id="txt_passport"></span>
                
                <!--
@@ -1777,21 +1492,6 @@ value: 60
                 -->
                 
                
-           </li>
-           
-           
-
-           
-           <li>
-
-               <div class="demo">
-                   Visa Date : <input id="date-range01" size="20" value="">  
-                   <button type="button" id="insert_visa"><span class="ui-icon 	ui-icon-calendar" /></span>Visa Insert Date </button>         
-               </div>
-           </li>
-           
-           
-           
            </li>
            
             <li>
@@ -1803,7 +1503,7 @@ value: 60
             </li>
            
            <li>
-               <button type="button" id="check_visa"  ><span class="ui-icon ui-icon-clock" /></span>VISA count DATE </button> :
+               <button type="button" id="check_visa"  ><span class="ui-icon ui-icon-carat-2-n-s" /></span>VISA count DATE </button> :
                <span id="txt_visa"></span>
                
                <!--
@@ -1811,15 +1511,6 @@ value: 60
                    <div id="progressbar_visa"></div>
                -->
                
-           </li>
-           
-           
-           <li>
-
-               <div class="demo">
-                   Report Date : <input id="date-range02" size="20" value="">  
-                   <button type="button" id="insert_report"><span class="ui-icon 	ui-icon-calendar" /></span>Report Insert Date </button>         
-               </div>
            </li>
            
             <li>
@@ -1831,7 +1522,7 @@ value: 60
             </li>
            
            <li>
-               <button type="button" id="check_register"><span class="ui-icon ui-icon-clock" /></span>90 Report count DATE</button> :
+               <button type="button" id="check_register"><span class="ui-icon ui-icon-carat-2-n-s" /></span>90 Report count DATE</button> :
                <span id="txt_register"></span>
                <!--
                <br/>
@@ -1856,18 +1547,6 @@ value: 60
            <li>
            Work Permit N (เลขที่ใบอนุญาต ทำงาน ) : <input type="text" name="work_permit"  id="work_permit"   maxlength="10"  style="width:30%" />
             </li>
-            
-            
-            
-            <li>
-
-               <div class="demo">
-                   Report Date : <input id="date-range03" size="20" value="">  
-                   <button type="button" id="insert_work"><span class="ui-icon 	ui-icon-calendar" /></span>Report Insert Date </button>         
-               </div>
-           </li>
-            
-            
            
             <li>
           Work Permit Iss. Date (วันที่ขออนุญาตทำงาน ) : <input type="text" name="iss_date_workpermit"  id="iss_date_workpermit"   maxlength="10"  style="width:20%" />
@@ -1879,7 +1558,7 @@ value: 60
            
            
             <li>
-               <button type="button" id="check_workpermit"><span class="ui-icon ui-icon-clock" /></span> Date Expire </button> :               
+               <button type="button" id="check_workpermit"><span class="ui-icon ui-icon-carat-2-n-s" /></span> Date Expire </button> :               
                <span id="txt_workpermit"></span>
                
                <!--
@@ -1898,10 +1577,6 @@ value: 60
             </li>
            
        </ul>
-       
-       
-       
-       
     
 <!--    <button type="button" class="btn btn-default">Default</button>
 -->	
@@ -1911,7 +1586,7 @@ value: 60
                 
                 
                 
-        <button type="reset" >Cancel</button>
+        <button type="button" >Cancel</button>
 
 <!--    <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-danger">Danger</button>

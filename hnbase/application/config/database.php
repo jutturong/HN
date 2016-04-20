@@ -48,9 +48,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'hmprecru_kkhp';
-$db['default']['password'] = 'hmprecru1234';
+$db['default']['hostname'] = '127.0.0.1';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '1234';
 $db['default']['database'] = 'hmprecru_kkhp';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

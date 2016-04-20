@@ -306,24 +306,10 @@ function   MY_cal_date_expire_concept($date_visa_expire_begin,$date_visa_expire)
                     $timeDiff= $endTimeStamp - $startTimeStamp;
                     
                     $numberDays = $timeDiff/86400;  // 86400 seconds in one day
-                    
-                    //return  $count_date=round($numberDays); //ของเดิม
+                    return  $count_date=round($numberDays); //ของเดิม
                    
-                      $count_date=round($numberDays); //ของเดิม
-                      
-                      
-                      if(  $count_date > 0 )
-                      {
-						   return  $count_date;
-					  }
-					  else
-					  {
-						  return  $count_date=0;
-						 // return $count_date= "Date Expire";
-					  }
-                      
-                      
-                      //return  $count_date;
+                    
+            
                  
                  /*   
                     $count_date=round($numberDays); //ของเดิม
